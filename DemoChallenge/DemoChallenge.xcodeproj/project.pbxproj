@@ -10,6 +10,7 @@
 		00D550D251216C0EA9D3618B /* Pods_DemoChallenge_DemoChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115AC429BB7A57E345F50C72 /* Pods_DemoChallenge_DemoChallengeUITests.framework */; };
 		231B0E4DA8F6AE93637D26A9 /* Pods_DemoChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38193E62CFC139C1214A72CB /* Pods_DemoChallengeTests.framework */; };
 		59C047240813A93BE0BF23C5 /* Pods_DemoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DFD1CFE0AE936400328CF9 /* Pods_DemoChallenge.framework */; };
+		D54E7CC02437A32B0098BB4B /* Me.JPG in Resources */ = {isa = PBXBuildFile; fileRef = D54E7CBD2437A32B0098BB4B /* Me.JPG */; };
 		D5B4B5F424367631008CB635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4B5F324367631008CB635 /* AppDelegate.swift */; };
 		D5B4B5F624367631008CB635 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4B5F524367631008CB635 /* SceneDelegate.swift */; };
 		D5B4B5F824367631008CB635 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4B5F724367631008CB635 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		76DFD1CFE0AE936400328CF9 /* Pods_DemoChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC664C4DEA2945572CE53C0 /* Pods-DemoChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-DemoChallengeTests/Pods-DemoChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DE1932B292424BE3A2C4CB /* Pods-DemoChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoChallenge.debug.xcconfig"; path = "Target Support Files/Pods-DemoChallenge/Pods-DemoChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		D54E7CBD2437A32B0098BB4B /* Me.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Me.JPG; sourceTree = "<group>"; };
 		D5B4B5F024367631008CB635 /* DemoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B4B5F324367631008CB635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B4B5F524367631008CB635 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				D5B4B62624367644008CB635 /* jeff_portrait.png */,
 				D5B4B6282436764A008CB635 /* Kjay.jpg */,
+				D54E7CBD2437A32B0098BB4B /* Me.JPG */,
 				D5B4B5F324367631008CB635 /* AppDelegate.swift */,
 				D5B4B5F524367631008CB635 /* SceneDelegate.swift */,
 				D5B4B5F724367631008CB635 /* ViewController.swift */,
@@ -286,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54E7CC02437A32B0098BB4B /* Me.JPG in Resources */,
 				D5B4B6292436764A008CB635 /* Kjay.jpg in Resources */,
 				D5B4B60324367632008CB635 /* LaunchScreen.storyboard in Resources */,
 				D5B4B60024367632008CB635 /* Assets.xcassets in Resources */,

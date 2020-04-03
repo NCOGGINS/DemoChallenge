@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16E3DAAAE274101355D25610 /* Pods_DemoChallenge_DemoChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115AC429BB7A57E345F50C72 /* Pods_DemoChallenge_DemoChallengeUITests.framework */; };
-		1D7DFDC0303C14754AB173C0 /* Pods_DemoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DFD1CFE0AE936400328CF9 /* Pods_DemoChallenge.framework */; };
-		74598480EB1A5A967079FFE6 /* Pods_DemoChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38193E62CFC139C1214A72CB /* Pods_DemoChallengeTests.framework */; };
+		00D550D251216C0EA9D3618B /* Pods_DemoChallenge_DemoChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115AC429BB7A57E345F50C72 /* Pods_DemoChallenge_DemoChallengeUITests.framework */; };
+		231B0E4DA8F6AE93637D26A9 /* Pods_DemoChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38193E62CFC139C1214A72CB /* Pods_DemoChallengeTests.framework */; };
+		59C047240813A93BE0BF23C5 /* Pods_DemoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DFD1CFE0AE936400328CF9 /* Pods_DemoChallenge.framework */; };
 		D5B4B5F424367631008CB635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4B5F324367631008CB635 /* AppDelegate.swift */; };
 		D5B4B5F624367631008CB635 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4B5F524367631008CB635 /* SceneDelegate.swift */; };
 		D5B4B5F824367631008CB635 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4B5F724367631008CB635 /* ViewController.swift */; };
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D7DFDC0303C14754AB173C0 /* Pods_DemoChallenge.framework in Frameworks */,
+				59C047240813A93BE0BF23C5 /* Pods_DemoChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74598480EB1A5A967079FFE6 /* Pods_DemoChallengeTests.framework in Frameworks */,
+				231B0E4DA8F6AE93637D26A9 /* Pods_DemoChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16E3DAAAE274101355D25610 /* Pods_DemoChallenge_DemoChallengeUITests.framework in Frameworks */,
+				00D550D251216C0EA9D3618B /* Pods_DemoChallenge_DemoChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +188,7 @@
 				D5B4B5EC24367631008CB635 /* Sources */,
 				D5B4B5ED24367631008CB635 /* Frameworks */,
 				D5B4B5EE24367631008CB635 /* Resources */,
-				FE9A2C1A4FE0930C3A785DA3 /* [CP] Embed Pods Frameworks */,
+				4729B0F4446A8BA6F983FA6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,6 +355,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4729B0F4446A8BA6F983FA6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoChallenge/Pods-DemoChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoChallenge/Pods-DemoChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoChallenge/Pods-DemoChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6DBA0EC815C7FFACF44B442C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,23 +409,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE9A2C1A4FE0930C3A785DA3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DemoChallenge/Pods-DemoChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DemoChallenge/Pods-DemoChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoChallenge/Pods-DemoChallenge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -526,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -580,9 +580,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

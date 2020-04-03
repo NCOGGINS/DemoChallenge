@@ -45,6 +45,10 @@
 	<string>Main</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Accessing photo library for image comparisson.</string>
+	<key>NSCameraUsageDescription</key>
+	<string></string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

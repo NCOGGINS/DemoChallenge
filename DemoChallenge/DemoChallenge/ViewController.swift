@@ -79,7 +79,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             if result != nil{
                 print (result!)
                 if (result!.faceMatches!.count > 0){
-                    for(face, faces) in result!.faceMatches!.enumerated(){
+                    for(_, faces) in result!.faceMatches!.enumerated(){
                         DispatchQueue.main.async {
                             self.similarityResult(similarity: faces.similarity!.floatValue)
                         }

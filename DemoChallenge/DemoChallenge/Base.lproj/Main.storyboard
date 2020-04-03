@@ -42,12 +42,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73Q-JT-ZLM">
-                                <rect key="frame" x="159" y="241" width="97" height="30"/>
+                                <rect key="frame" x="196" y="241" width="198" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="W31-ps-yrL"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XbN-t2-qaH"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="mFz-Fa-lKK"/>
-                                    <constraint firstAttribute="height" constant="30" id="y3B-Kh-tbQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Msr-qx-AqU"/>
+                                    <constraint firstAttribute="width" constant="198" id="YUh-RK-buq"/>
                                 </constraints>
                                 <state key="normal" title="Select Image"/>
                                 <connections>
@@ -65,34 +63,46 @@
                                     <action selector="compareFaces:" destination="BYZ-38-t0r" eventType="touchDown" id="Mhf-nq-j2H"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHe-6P-FvQ">
+                                <rect key="frame" x="75" y="240" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="75B-ju-r1r"/>
+                                    <constraint firstAttribute="height" constant="30" id="d3r-u1-Z51"/>
+                                </constraints>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="takeImage1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8vP-J9-F0a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="73Q-JT-ZLM" secondAttribute="trailing" constant="158" id="0ws-0M-u5a"/>
+                            <constraint firstItem="9iY-Kl-tfX" firstAttribute="top" secondItem="oHe-6P-FvQ" secondAttribute="bottom" constant="66" id="2dU-gR-PnJ"/>
                             <constraint firstItem="rQT-Cd-EX2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2mw-3b-xDk"/>
-                            <constraint firstItem="9iY-Kl-tfX" firstAttribute="top" secondItem="73Q-JT-ZLM" secondAttribute="bottom" constant="65" id="6DL-qh-c39"/>
+                            <constraint firstItem="oHe-6P-FvQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="67Y-Xh-6aT"/>
                             <constraint firstItem="rQT-Cd-EX2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BJb-OL-KaL"/>
                             <constraint firstItem="vDh-XE-dzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="BRq-ig-alx"/>
-                            <constraint firstItem="73Q-JT-ZLM" firstAttribute="top" secondItem="rQT-Cd-EX2" secondAttribute="bottom" constant="8" id="EhH-88-Niv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="73Q-JT-ZLM" secondAttribute="trailing" constant="20" id="E1f-iw-5Jd"/>
+                            <constraint firstItem="73Q-JT-ZLM" firstAttribute="leading" secondItem="oHe-6P-FvQ" secondAttribute="trailing" constant="36" id="Eif-fI-Nup"/>
                             <constraint firstItem="9iY-Kl-tfX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HQ8-po-ei8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9iY-Kl-tfX" secondAttribute="trailing" constant="19" id="JiI-FB-wvW"/>
-                            <constraint firstItem="9iY-Kl-tfX" firstAttribute="top" secondItem="73Q-JT-ZLM" secondAttribute="bottom" constant="65" id="K8p-LZ-qlG"/>
                             <constraint firstItem="LIm-0K-jwR" firstAttribute="top" secondItem="9iY-Kl-tfX" secondAttribute="bottom" constant="8" id="Lvt-wi-BqA"/>
-                            <constraint firstItem="73Q-JT-ZLM" firstAttribute="top" secondItem="rQT-Cd-EX2" secondAttribute="bottom" constant="8" id="Our-bV-BsB"/>
+                            <constraint firstItem="oHe-6P-FvQ" firstAttribute="top" secondItem="rQT-Cd-EX2" secondAttribute="bottom" constant="7" id="MSe-ht-Gte"/>
                             <constraint firstItem="LIm-0K-jwR" firstAttribute="top" secondItem="9iY-Kl-tfX" secondAttribute="bottom" constant="8" id="S97-mB-aAb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9iY-Kl-tfX" secondAttribute="trailing" constant="19" id="SJZ-dT-VEL"/>
+                            <constraint firstItem="73Q-JT-ZLM" firstAttribute="leading" secondItem="oHe-6P-FvQ" secondAttribute="trailing" constant="36" id="Yiq-kL-KOQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rQT-Cd-EX2" secondAttribute="trailing" constant="19" id="f3W-1h-Si8"/>
                             <constraint firstItem="rQT-Cd-EX2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fTs-dp-2oZ"/>
                             <constraint firstItem="9iY-Kl-tfX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hI8-tL-N7i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rQT-Cd-EX2" secondAttribute="trailing" constant="19" id="hwR-CC-smc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vDh-XE-dzA" secondAttribute="bottom" constant="20" id="jBp-Ed-TxU"/>
                             <constraint firstItem="LIm-0K-jwR" firstAttribute="top" secondItem="9iY-Kl-tfX" secondAttribute="bottom" constant="8" id="kqy-Y1-DNF"/>
-                            <constraint firstItem="73Q-JT-ZLM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="kxu-Fd-Ajw"/>
                             <constraint firstItem="rQT-Cd-EX2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="n1y-0J-DRT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vDh-XE-dzA" secondAttribute="trailing" constant="153" id="s7G-BU-ruv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LIm-0K-jwR" secondAttribute="trailing" constant="162" id="thf-fc-3Vx"/>
-                            <constraint firstItem="73Q-JT-ZLM" firstAttribute="top" secondItem="rQT-Cd-EX2" secondAttribute="bottom" constant="8" id="xmK-hE-JeY"/>
                             <constraint firstItem="LIm-0K-jwR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="yLU-Hj-Zht"/>
+                            <constraint firstItem="73Q-JT-ZLM" firstAttribute="top" secondItem="rQT-Cd-EX2" secondAttribute="bottom" constant="8" id="yQm-fo-bel"/>
+                            <constraint firstItem="9iY-Kl-tfX" firstAttribute="top" secondItem="73Q-JT-ZLM" secondAttribute="bottom" constant="65" id="zfS-rW-cdr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

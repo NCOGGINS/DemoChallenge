@@ -40,6 +40,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
     }
     
+    @IBAction func takeImage1(_ sender: Any) {
+        imageSelection = 1
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = .camera
+        image.allowsEditing = false
+        self.present(image, animated: true)
+        {
+            //after it's complete
+        }
+    }
+    
     @IBAction func compareFaces(_ sender: Any) {
         CompareImages(Image1: (image1.image?.jpegData(compressionQuality: 0.2))!, Image2: (image2.image?.jpegData(compressionQuality: 0.2))!)
     }

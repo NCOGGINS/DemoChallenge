@@ -13,6 +13,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     var rekognitionObject:AWSRekognition?
     var imageSelection = 0
+    var image1Selected = false
+    var image2Selected = false
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     
@@ -24,7 +26,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         image.allowsEditing = false
         self.present(image, animated: true)
         {
-            //after it's complete
+            self.image1Selected = true
         }
     }
     
@@ -36,7 +38,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         image.allowsEditing = false
         self.present(image, animated: true)
         {
-            //after it's complete
+            self.image2Selected = true
         }
     }
     
@@ -48,7 +50,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         image.allowsEditing = false
         self.present(image, animated: true)
         {
-            //after it's complete
+            self.image1Selected = true
         }
     }
     
@@ -60,7 +62,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         image.allowsEditing = false
         self.present(image, animated: true)
         {
-            //after it's complete
+            self.image2Selected = true
         }
     }
     
@@ -82,37 +84,44 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     func CompareImages(Image1: Data, Image2: Data){
-        rekognitionObject = AWSRekognition.default()
-        let image1 = AWSRekognitionImage()
-        image1?.bytes = Image1
-        
-        let image2 = AWSRekognitionImage()
-        image2?.bytes = Image2
-        
-        let request = AWSRekognitionCompareFacesRequest()
-        request?.sourceImage = image1
-        request?.targetImage = image2
-        request?.similarityThreshold = 0
-        
-        rekognitionObject?.compareFaces(request!){
-            (result, error) in
-            if error != nil {
-                print (error!)
-                return
-            }
-            if result != nil{
-                print (result!)
-                if (result!.faceMatches!.count > 0){
-                    for(_, faces) in result!.faceMatches!.enumerated(){
-                        DispatchQueue.main.async {
-                            self.similarityResult(similarity: faces.similarity!.floatValue)
+        if image1Selected && image2Selected {
+            rekognitionObject = AWSRekognition.default()
+            let image1 = AWSRekognitionImage()
+            image1?.bytes = Image1
+            
+            let image2 = AWSRekognitionImage()
+            image2?.bytes = Image2
+            
+            let request = AWSRekognitionCompareFacesRequest()
+            request?.sourceImage = image1
+            request?.targetImage = image2
+            request?.similarityThreshold = 0
+            
+            rekognitionObject?.compareFaces(request!){
+                (result, error) in
+                if error != nil {
+                    print (error!)
+                    return
+                }
+                if result != nil{
+                    print (result!)
+                    if (result!.faceMatches!.count > 0){
+                        for(_, faces) in result!.faceMatches!.enumerated(){
+                            DispatchQueue.main.async {
+                                self.similarityResult(similarity: faces.similarity!.floatValue)
+                            }
                         }
                     }
-                }
-                else {
-                    print(0)
+                    else {
+                        print(0)
+                    }
                 }
             }
+        }
+        else {
+            let alert = UIAlertController(title: "Invalid input.", message: "Please select two faces to compare.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert,animated: true)
         }
     }
     
@@ -125,7 +134,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     
